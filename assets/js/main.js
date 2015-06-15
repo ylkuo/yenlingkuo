@@ -31,6 +31,7 @@ WebsiteUI.prototype.setupHandlers = function() {
       self.unsetActiveMenu();
       $(".go-home").parent().addClass("active");
       $("#main").html(data);
+      $(".navbar-collapse").collapse('hide');
     });
   });
 
@@ -40,6 +41,7 @@ WebsiteUI.prototype.setupHandlers = function() {
       self.unsetActiveMenu();
       $(".go-about").parent().addClass("active");
       $("#main").html(data);
+      $(".navbar-collapse").collapse('hide');
     });
   });
 
@@ -49,6 +51,7 @@ WebsiteUI.prototype.setupHandlers = function() {
       self.unsetActiveMenu();
       $(".go-project").parent().addClass("active");
       $("#main").html(data);
+      $(".navbar-collapse").collapse('hide');
     });
   });
 
@@ -58,6 +61,7 @@ WebsiteUI.prototype.setupHandlers = function() {
       self.unsetActiveMenu();
       $(".go-publication").parent().addClass("active");
       $("#main").html(data);
+      $(".navbar-collapse").collapse('hide');
     });
   });
 };
