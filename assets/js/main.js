@@ -30,8 +30,12 @@ WebsiteUI.prototype.setupHandlers = function() {
     $.get("home.html", function(data) {
       self.unsetActiveMenu();
       $(".go-home").parent().addClass("active");
+      $("#header").show();
       $("#main").html(data);
       $(".navbar-collapse").collapse('hide');
+    });
+    $( window ).resize(function() {
+      $("#header").show();
     });
   });
 
@@ -40,6 +44,7 @@ WebsiteUI.prototype.setupHandlers = function() {
     $.get("about.html", function(data) {
       self.unsetActiveMenu();
       $(".go-about").parent().addClass("active");
+      self.hideHeader();
       $("#main").html(data);
       $(".navbar-collapse").collapse('hide');
     });
@@ -50,6 +55,7 @@ WebsiteUI.prototype.setupHandlers = function() {
     $.get("project.html", function(data) {
       self.unsetActiveMenu();
       $(".go-project").parent().addClass("active");
+      self.hideHeader();
       $("#main").html(data);
       $(".navbar-collapse").collapse('hide');
     });
@@ -60,6 +66,7 @@ WebsiteUI.prototype.setupHandlers = function() {
     $.get("publication.html", function(data) {
       self.unsetActiveMenu();
       $(".go-publication").parent().addClass("active");
+      self.hideHeader();
       $("#main").html(data);
       $(".navbar-collapse").collapse('hide');
     });
@@ -76,3 +83,19 @@ WebsiteUI.prototype.unsetActiveMenu = function() {
   	}
   });
 };
+
+/**
+ * Hide header if the browser size is smaller than medium and header is on the top.
+ */
+WebsiteUI.prototype.hideHeader = function() {
+  if ($( window ).width() < 980) {
+    $("#header").hide();
+  }
+  $( window ).resize(function() {
+    if ($( window ).width() < 980) {
+      $("#header").hide();
+    } else {
+      $("#header").show();
+    }
+  });
+}
