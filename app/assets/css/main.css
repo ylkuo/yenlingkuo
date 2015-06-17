@@ -30,8 +30,12 @@
 
 ul {
   list-style: disc;
-  margin: 0 0 2em 0;
+  margin: 1em;
   padding-left: 1em;
+}
+
+ul li {
+  padding: 0.5em 0;
 }
 
 ul.icons {
@@ -203,20 +207,26 @@ ul.icons li .icon:before {
 #main {
   margin-left: 5%;
   max-width: 54em;
-  padding: 8em 4em 4em 4em;
+  padding: 4.5em 4em 4em 4em;
   width: calc(100% - 35%);
 }
 
 #main > section {
   border-top: solid 2px #efefef;
-  margin: 4em 0 0 0;
-  padding: 4em 0 0 0;
 }
 
 #main > section:first-child {
   border-top: 0;
   margin-top: 0;
   padding-top: 0;
+}
+
+#main h1, #main h2, #main h3, #main h4 {
+  color: #363e42;
+}
+
+#main h1 {
+  font-size: 1.4em;
 }
 
 
@@ -253,7 +263,7 @@ ul.icons li .icon:before {
   #main {
     margin-left: 3%;
     max-width: none;
-    padding: 6em 3em 3em 3em;
+    padding: 4.5em 3em 3em 3em;
     width: calc(100% - 30%);
   }
 }
@@ -323,7 +333,7 @@ ul.icons li .icon:before {
   /* Main */
   #main {
 	margin: 0;
-	padding: 6em 4em;
+	padding: 1.5em 4em;
 	width: 100%;
   }
 }
@@ -333,7 +343,7 @@ ul.icons li .icon:before {
 @media screen and (max-width: 736px) {
   /* Basic */
   h1 {
-	font-size: 1.5em;
+	font-size: 1.4em;
   }
   h2 {
 	font-size: 1.2em;
@@ -380,11 +390,7 @@ ul.icons li .icon:before {
 
   /* Main */
   #main {
-	padding: 2.25em 1.5em 0.25em 1.5em;
-  }
-  #main > section {
-	margin: 2.25em 0 0 0;
-	padding: 2.25em 0 0 0;
+	padding: 1em 1.9em 0.25em 1.9em;
   }
 }
 
