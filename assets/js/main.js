@@ -14,9 +14,6 @@ function WebsiteUI() {
   $.get( "home.html", function(data) {
     $( "#main" ).html(data);
   });
-  $.get("about.html", function(data) { });
-  $.get("project.html", function(data) { });
-  $.get("publication.html", function(data) { });
 }
 
 /**
@@ -58,6 +55,13 @@ WebsiteUI.prototype.setupHandlers = function() {
       self.hideHeader();
       $("#main").html(data);
       $(".navbar-collapse").collapse('hide');
+
+      self.setupProjectImageLightbox($('#movisee'));
+      self.setupProjectImageLightbox($('#cubicfilm'));
+      self.setupProjectImageLightbox($('#handpaintfilm'));
+      self.setupProjectImageLightbox($('#flora'));
+      self.setupProjectImageLightbox($('#panorama'));
+      self.setupProjectImageLightbox($('#sdio'));
     });
   });
 
@@ -98,4 +102,19 @@ WebsiteUI.prototype.hideHeader = function() {
       $("#header").show();
     }
   });
-}
+};
+
+WebsiteUI.prototype.setupProjectImageLightbox = function(elem) {
+  elem.poptrox({
+    caption: function($a) { return $a.find($('img'))[0].getAttribute('alt'); },
+    overlayColor: '#2c2c2c',
+    overlayOpacity: 0.85,
+    popupCloserText: '',
+    popupLoaderText: '',
+    selector: 'a.image',
+    usePopupCaption: true,
+    usePopupDefaultStyling: false,
+    usePopupEasyClose: false,
+    usePopupNav: true
+  });
+};
