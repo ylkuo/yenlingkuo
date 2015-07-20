@@ -129,6 +129,48 @@ ul.icons li .icon:before {
   width: 200px;
 }
 
+.image.goto {
+  text-align: center;
+  width: 180px;
+}
+
+.image.goto:after {
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 0.35em;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  color: #fff;
+  content: 'Go To';
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 400;
+  left: 50%;
+  line-height: 2.25em;
+  margin: -1.25em 0 0 -3em;
+  opacity: 0;
+  padding: 0 1.5em;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 50%;
+  white-space: nowrap;
+}
+
+.image.goto:hover:after {
+  opacity: 1.0;
+}
+
+.image.goto:hover:before {
+  background: url("images/overlay.png"), url("images/overlay.png");
+  opacity: 1.0;
+}
+
+.image.goto img  {
+  width: 180px;
+}
+
 .image img {
   border-radius: 0.35em;
   display: block;
@@ -270,7 +312,7 @@ ul.icons li .icon:before {
 #main {
   margin-left: 5%;
   max-width: 54em;
-  padding: 4.5em 4em 4em 4em;
+  padding: 4.5em 0 4em 3em;
   width: calc(100% - 35%);
 }
 
@@ -311,6 +353,13 @@ ul.icons li .icon:before {
   vertical-align: top;
   margin: 0 0.5em;
   width: 62%;
+}
+
+#main .cell-grid {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 1em 1em 1em;
 }
 
 /* Poptrox */
@@ -577,11 +626,11 @@ ul.icons li .icon:before {
     width: 30%;
   }
   #footer .copyright li {
-	border-left-width: 0;
-	display: block;
-	line-height: 2.25em;
-	margin-left: 0;
-	padding-left: 0;
+	  border-left-width: 0;
+	  display: block;
+	  line-height: 2.25em;
+	  margin-left: 0;
+	  padding-left: 0;
   }
 
   /* Main */
@@ -590,6 +639,9 @@ ul.icons li .icon:before {
     max-width: none;
     padding: 4.5em 3em 3em 3em;
     width: calc(100% - 30%);
+  }
+  #main .cell-grid {
+    margin: 0 0.5em 1em 0.5em;
   }
 }
 
@@ -608,16 +660,16 @@ ul.icons li .icon:before {
 
   /* Header */
   #header {
-	background-attachment: scroll;
-	left: auto;
-	padding: 4em 4em 0.3em 4em;
-	position: relative;
-	text-align: left;
-	top: auto;
-	width: 100%;
+	  background-attachment: scroll;
+	  left: auto;
+	  padding: 4em 4em 0.3em 4em;
+	  position: relative;
+	  text-align: left;
+	  top: auto;
+	  width: 100%;
   }
   #header h1 {
-	font-size: 1.5em;
+	  font-size: 1.5em;
   }
   #header .cell {
   	display: inline-block;
@@ -632,34 +684,34 @@ ul.icons li .icon:before {
   /* Footer */
   #footer {
     background-attachment: scroll;
-	background-color: #1c2126;
-	bottom: auto;
-	left: auto;
-	padding: 4em 4em 6em 4em;
-	position: relative;
-	text-align: center;
-	width: 100%;
+	  background-color: #1c2126;
+	  bottom: auto;
+	  left: auto;
+	  padding: 4em 4em 6em 4em;
+	  position: relative;
+	  text-align: center;
+	  width: 100%;
   }
 
   #footer .icons {
-	margin: 0 0 1em 0;
+	  margin: 0 0 1em 0;
   }
   #footer .copyright {
     margin: 0 0 1em 0;
   }
   #footer .copyright li {
-	border-left-width: 1px;
-	display: inline-block;
-	line-height: 1em;
-	margin-left: 0.75em;
-	padding-left: 0.75em;
+	  border-left-width: 1px;
+	  display: inline-block;
+	  line-height: 1em;
+	  margin-left: 0.75em;
+	  padding-left: 0.75em;
   }
 
   /* Main */
   #main {
-	margin: 0;
-	padding: 4.5em 4em;
-	width: 100%;
+	  margin: 0;
+	  padding: 4.5em 4em;
+	  width: 100%;
   }
   #main .cell-text {
     width: 60%;
@@ -671,35 +723,35 @@ ul.icons li .icon:before {
 @media screen and (max-width: 736px) {
   /* Basic */
   h1 {
-	font-size: 1.4em;
+	  font-size: 1.4em;
   }
   h2 {
-	font-size: 1.2em;
+	  font-size: 1.2em;
   }
   h3 {
-	font-size: 1em;
+	  font-size: 1em;
   }
 
   /* List */
   ul.labeled-icons li {
-	padding-left: 2em;
+	  padding-left: 2em;
   }
   ul.labeled-icons li h3 {
-	line-height: 1.75em;
+	  line-height: 1.75em;
   }
 
   /* Header */
   #header {
-	background-attachment: scroll;
-	left: auto;
-	padding: 3.5em 0.6em 0.3em 0.6em;
-	position: relative;
-	text-align: left;
-	top: auto;
-	width: 100%;
+	  background-attachment: scroll;
+	  left: auto;
+	  padding: 3.5em 0.6em 0.3em 0.6em;
+	  position: relative;
+	  text-align: left;
+	  top: auto;
+	  width: 100%;
   }
   #header h1 {
-	font-size: 1.1em;
+	  font-size: 1.1em;
   }
   #header .cell {
   	display: inline-block;
@@ -713,7 +765,7 @@ ul.icons li .icon:before {
 
   /* Footer */
   #footer {
-	padding: 2.25em 1.5em;
+	  padding: 2.25em 1.5em;
   }
 
   /* Image */
@@ -724,10 +776,17 @@ ul.icons li .icon:before {
   .image.thumb img {
     width: 250px;
   }
+  .image.goto {
+    text-align: center;
+    width: 135px;
+  }
+  .image.goto img {
+    width: 135px;
+  }
 
   /* Main */
   #main {
-	padding: 3.5em 1.9em 0.25em 1.9em;
+	  padding: 3.5em 1.9em 0.25em 1.9em;
   }
   #main .cell-text {
     width: 90%;
@@ -735,6 +794,9 @@ ul.icons li .icon:before {
   }
   #main .cell-image {
     margin: 0;
+  }
+  #main .cell-grid {
+    margin: 0 0.3em 0.5em 0.3em;
   }
   #main section article {
   	text-align: center;
@@ -756,44 +818,44 @@ ul.icons li .icon:before {
 @media screen and (max-width: 480px) {
   /* List */
   ul.actions {
-	margin: 0 0 2em 0;
+	  margin: 0 0 2em 0;
   }
   ul.actions li {
-	display: block;
-	padding: 1em 0 0 0;
-	text-align: center;
-	width: 100%;
+	  display: block;
+	  padding: 1em 0 0 0;
+	  text-align: center;
+	  width: 100%;
   }
   ul.actions li:first-child {
-	padding-top: 0;
+	  padding-top: 0;
   }
   ul.actions li > * {
-	margin: 0 !important;
-	width: 100%;
+	  margin: 0 !important;
+	  width: 100%;
   }
   ul.actions li > *.icon:before {
-	margin-left: -2em;
+	  margin-left: -2em;
   }
   ul.actions.small li {
-	padding: 0.5em 0 0 0;
+	  padding: 0.5em 0 0 0;
   }
   ul.actions.small li:first-child {
-	padding-top: 0;
+	  padding-top: 0;
   }
 
   /* Header */
   #header {
-	background-attachment: scroll;
-	left: auto;
-	padding: 3.2em 0.8em 0em 0.8em;
-	position: relative;
-	text-align: left;
-	top: auto;
-	width: 100%;
+  	background-attachment: scroll;
+	  left: auto;
+	  padding: 3.2em 0.8em 0em 0.8em;
+	  position: relative;
+	  text-align: left;
+	  top: auto;
+	  width: 100%;
   }
   #header h1 {
   	display: none;
-	font-size: 1em;
+	  font-size: 1em;
   }
   #header span {
   	display: none;
@@ -811,10 +873,10 @@ ul.icons li .icon:before {
 
   /* Footer */
   #footer .copyright li {
-	border-left-width: 0;
-	display: block;
-	line-height: 2.25em;
-	margin-left: 0;
-	padding-left: 0;
+	  border-left-width: 0;
+	  display: block;
+	  line-height: 2.25em;
+	  margin-left: 0;
+	  padding-left: 0;
   }
 }

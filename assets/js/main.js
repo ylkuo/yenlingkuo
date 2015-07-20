@@ -1,5 +1,15 @@
 'use strict';
 
+(function($) {
+  $.fn.goTo = function() {
+    console.log($(".navbar").height());
+    $('html, body').animate({
+      scrollTop: ($(this).offset().top - $(".navbar").height()) + 'px'
+    }, 'fast');
+    return this;
+  }
+})(jQuery);
+
 var WEBSITE_UI;
 $(function() {
   WEBSITE_UI = new WebsiteUI();
@@ -65,6 +75,8 @@ WebsiteUI.prototype.setupHandlers = function() {
       self.setupProjectImageLightbox($('#flora'));
       self.setupProjectImageLightbox($('#panorama'));
       self.setupProjectImageLightbox($('#sdio'));
+
+      $(document).on('click', 'a.go-movisee', function(e) { $('#movisee').goTo(); });
     });
   });
 
