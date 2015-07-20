@@ -56,6 +56,9 @@ WebsiteUI.prototype.setupHandlers = function() {
       $("#main").html(data);
       $(".navbar-collapse").collapse('hide');
 
+      self.setupProjectImageLightbox($('#cs-integration'));
+      self.setupProjectImageLightbox($('#analogyspace'));
+      self.setupProjectImageLightbox($('#virtualpets'));
       self.setupProjectImageLightbox($('#movisee'));
       self.setupProjectImageLightbox($('#cubicfilm'));
       self.setupProjectImageLightbox($('#handpaintfilm'));
