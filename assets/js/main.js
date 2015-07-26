@@ -67,16 +67,19 @@ WebsiteUI.prototype.setupHandlers = function() {
       $(".navbar-collapse").collapse('hide');
 
       self.setupProjectImageLightbox($('#cs-integration'));
+      self.setupProjectImageLightbox($('#language-explorer'));
       self.setupProjectImageLightbox($('#analogyspace'));
       self.setupProjectImageLightbox($('#virtualpets'));
       self.setupProjectImageLightbox($('#movisee'));
       self.setupProjectImageLightbox($('#cubicfilm'));
       self.setupProjectImageLightbox($('#handpaintfilm'));
+      self.setupProjectImageLightbox($('#taiwanuxd'));
       self.setupProjectImageLightbox($('#flora'));
       self.setupProjectImageLightbox($('#panorama'));
       self.setupProjectImageLightbox($('#sdio'));
 
       $(document).on('click', 'a.go-movisee', function(e) { $('#movisee').goTo(); });
+      $(document).on('click', 'a.go-taiwanuxd', function(e) { $('#taiwanuxd').goTo(); });
     });
   });
 
