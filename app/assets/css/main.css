@@ -322,7 +322,6 @@ ul.icons li .icon:before {
 
 #main > section:first-child {
   border-top: 0;
-  margin-top: 0;
   padding-top: 0;
 }
 
@@ -360,6 +359,16 @@ ul.icons li .icon:before {
   vertical-align: top;
   text-align: center;
   margin: 0 1em 1em 1em;
+}
+
+.home ul li {
+  padding: 0.1em 0;
+}
+
+.home ul {
+  list-style: disc;
+  margin: 0 1em;
+  padding-left: 1em;
 }
 
 /* Poptrox */
@@ -643,6 +652,9 @@ ul.icons li .icon:before {
   #main .cell-grid {
     margin: 0 0.5em 1em 0.5em;
   }
+  section.home {
+    margin: 0 2em 0 0;
+  }
 }
 
 /* Medium */
@@ -709,12 +721,14 @@ ul.icons li .icon:before {
 
   /* Main */
   #main {
-	  margin: 0;
 	  padding: 4.5em 4em;
 	  width: 100%;
   }
   #main .cell-text {
     width: 60%;
+  }
+  section.home {
+    margin: -3em 1.5em 0 0;
   }
 }
 
