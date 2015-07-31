@@ -17,41 +17,12 @@ $(function() {
 function WebsiteUI() {
   // Call init methods.
   var self = this;
-  // Setup page navigation.
-  self.setupHandlers();
   // Setup History listener.
   window.History.Adapter.bind(window, 'statechange', function() {
     self.pageController(window.History.getState().hash, false);
   });
   self.pageController(window.History.getState().hash, false);
 }
-
-/**
- * Set up handlers for url link clicks.
- */
-WebsiteUI.prototype.setupHandlers = function() {
-  var self = this;
-
-  $(document).on('click', 'a.go-home', function(e) {
-    e.preventDefault();
-    self.go('/');
-  });
-
-  $(document).on('click', 'a.go-about', function(e) {
-    e.preventDefault();
-    self.go('/?about');
-  });
-
-  $(document).on('click', 'a.go-project', function(e) {
-    e.preventDefault();
-    self.go('/?project')
-  });
-
-  $(document).on('click', 'a.go-publication', function(e) {
-    e.preventDefault();
-    self.go('/?publication')
-  });
-};
 
 WebsiteUI.prototype.go = function(url) {
   window.History.pushState(null, null, url);
