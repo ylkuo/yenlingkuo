@@ -64,6 +64,10 @@ WebsiteUI.prototype.pageController = function(url) {
       self.renderPublication();
       self.goTop();
       break;
+    case 'activity':
+      self.renderActivity();
+      self.goTop();
+      break;
     default:
       self.renderHome();
       self.goTop();
@@ -175,5 +179,24 @@ WebsiteUI.prototype.renderPublication = function() {
     self.hideHeader();
     $("#main").html(data);
     $(".navbar-collapse").collapse('hide');
+  });
+};
+
+WebsiteUI.prototype.renderActivity = function() {
+  var self = this;
+  self.unsetActiveMenu();
+  $.get("activity.html", function(data) {
+    $(".go-activity").parent().addClass("active");
+    self.hideHeader();
+    $("#main").html(data);
+    $(".navbar-collapse").collapse('hide');
+
+    self.setupProjectImageLightbox($('#2015-googleserve'));
+    self.setupProjectImageLightbox($('#2012-ho-award'));
+    self.setupProjectImageLightbox($('#2012-aaai'));
+    self.setupProjectImageLightbox($('#2009-marathon-fubon'));
+    self.setupProjectImageLightbox($('#2008-nightmarket'));
+    self.setupProjectImageLightbox($('#2008-aiesec-wncf'));
+    self.setupProjectImageLightbox($('#2008-aiesec-transition'));
   });
 };

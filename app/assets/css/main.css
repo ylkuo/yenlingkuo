@@ -345,7 +345,7 @@ ul.icons li .icon:before {
 
 #main {
   margin-left: 5%;
-  max-width: 54em;
+  /*max-width: 54em;*/
   padding: 4.5em 0 4em 3em;
   /* width: calc(100% - 35%); */
 }
@@ -374,6 +374,10 @@ ul.icons li .icon:before {
 
 #main h3 {
   font-size: 1.2em;
+}
+
+#main h4 {
+  font-size: 1.1em;
 }
 
 #main .cell-image {
