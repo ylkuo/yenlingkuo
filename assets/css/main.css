@@ -365,9 +365,10 @@ ul.icons li .icon:before {
 
 #main h1 {
   font-size: 1.4em;
+  font-weight: bold;
 }
 
-#main h1 {
+#main h2 {
   font-size: 1.3em;
 }
 
