@@ -115,8 +115,8 @@ WebsiteUI.prototype.setupProjectImageLightbox = function(elem) {
 
 WebsiteUI.prototype.renderHome = function() {
   var self = this;
+  self.unsetActiveMenu();
   $.get("home.html", function(data) {
-    self.unsetActiveMenu();
     $(".go-home").parent().addClass("active");
     $("#header").show();
     $("#main").html(data);
@@ -129,8 +129,8 @@ WebsiteUI.prototype.renderHome = function() {
 
 WebsiteUI.prototype.renderAbout = function() {
   var self = this;
+  self.unsetActiveMenu();
   $.get("about.html", function(data) {
-    self.unsetActiveMenu();
     $(".go-about").parent().addClass("active");
     self.hideHeader();
     $("#main").html(data);
@@ -140,8 +140,8 @@ WebsiteUI.prototype.renderAbout = function() {
 
 WebsiteUI.prototype.renderProject = function(bookmark) {
   var self = this;
+  self.unsetActiveMenu();
   $.get("project.html", function(data) {
-    self.unsetActiveMenu();
     $(".go-project").parent().addClass("active");
     self.hideHeader();
     $("#main").html(data);
@@ -169,8 +169,8 @@ WebsiteUI.prototype.renderProject = function(bookmark) {
 
 WebsiteUI.prototype.renderPublication = function() {
   var self = this;
+  self.unsetActiveMenu();
   $.get("publication.html", function(data) {
-    self.unsetActiveMenu();
     $(".go-publication").parent().addClass("active");
     self.hideHeader();
     $("#main").html(data);

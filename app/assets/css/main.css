@@ -1,8 +1,35 @@
 @import url("font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
-.navbar-inverse {
-  background-color: #1c2126;
-  border-color: #1c2126;
+.navbar {
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
+  box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
+}
+
+.navbar-default .navbar-brand {
+  margin: 0;
+  font-size: 1.5em;
+  color: #000;
+  font-weight: 700;
+}
+
+body, input, select, textarea {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6em;
+}
+
+a {
+  color: #3355cc;
+}
+
+a:hover {
+  color: #3355cc;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Icon */
@@ -264,13 +291,14 @@ ul.icons li .icon:before {
 /* Footer */
 
 #footer {
-  background-color: #1c2126;
-  bottom: 0;
-  right: 0;
-  padding: 0 0 6em 4em;
-  position: fixed;
-  text-align: left;
-  width: 35%;
+  background-attachment: scroll;
+  background-color: #fafafa;
+  bottom: auto;
+  left: auto;
+  padding: 4em 4em 6em 4em;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 #footer .icons {
@@ -278,11 +306,17 @@ ul.icons li .icon:before {
 }
 
 #footer .icons a {
-  color: rgba(255, 255, 255, 0.4);
+  color: #777;
+}
+
+#footer .icons a:hover {
+  color: #3355cc;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #footer .copyright {
-  color: rgba(255, 255, 255, 0.4);
+  color: #777;
   font-size: 0.8em;
   list-style: none;
   margin: 1em 0 0 0;
@@ -290,7 +324,7 @@ ul.icons li .icon:before {
 }
 
 #footer .copyright li {
-  border-left: solid 1px rgba(255, 255, 255, 0.25);
+  border-left: solid 1px #777;
   display: inline-block;
   line-height: 1em;
   margin-left: 0.75em;
@@ -313,7 +347,7 @@ ul.icons li .icon:before {
   margin-left: 5%;
   max-width: 54em;
   padding: 4.5em 0 4em 3em;
-  width: calc(100% - 35%);
+  /* width: calc(100% - 35%); */
 }
 
 #main > section {
@@ -369,6 +403,16 @@ ul.icons li .icon:before {
   list-style: disc;
   margin: 0 1em;
   padding-left: 1em;
+}
+
+#home .cell {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1em;
+}
+
+#home .img-block {
+  display: inline-block;
 }
 
 /* Poptrox */
@@ -630,10 +674,6 @@ ul.icons li .icon:before {
   }
 
   /* Footer */
-  #footer {
-    padding: 0 3em 5em 3em;
-    width: 30%;
-  }
   #footer .copyright li {
 	  border-left-width: 0;
 	  display: block;
@@ -647,7 +687,7 @@ ul.icons li .icon:before {
     margin-left: 3%;
     max-width: none;
     padding: 4.5em 3em 3em 3em;
-    width: calc(100% - 30%);
+    /*width: calc(100% - 30%);*/
   }
   #main .cell-grid {
     margin: 0 0.5em 1em 0.5em;
@@ -683,7 +723,7 @@ ul.icons li .icon:before {
   #header h1 {
 	  font-size: 1.5em;
   }
-  #header .cell {
+  #home .cell {
   	display: inline-block;
   	vertical-align: middle;
   	margin: 0 1em;
@@ -694,17 +734,6 @@ ul.icons li .icon:before {
   }
 
   /* Footer */
-  #footer {
-    background-attachment: scroll;
-	  background-color: #1c2126;
-	  bottom: auto;
-	  left: auto;
-	  padding: 4em 4em 6em 4em;
-	  position: relative;
-	  text-align: center;
-	  width: 100%;
-  }
-
   #footer .icons {
 	  margin: 0 0 1em 0;
   }
@@ -728,7 +757,7 @@ ul.icons li .icon:before {
     width: 60%;
   }
   section.home {
-    margin: -3em 1.5em 0 0;
+    margin: 1em 1.5em 0 0;
   }
 }
 
@@ -767,7 +796,7 @@ ul.icons li .icon:before {
   #header h1 {
 	  font-size: 1.1em;
   }
-  #header .cell {
+  #home .cell {
   	display: inline-block;
   	vertical-align: middle;
   	margin: 0 0.5em;
@@ -875,14 +904,10 @@ ul.icons li .icon:before {
   	display: none;
   	font-size: 0.8em;
   }
-  #header .cell {
+  #home .cell {
   	display: inline-block;
   	vertical-align: middle;
-  	margin: 0 0.2em;
-  }
-  .image.avatar img {
-    border-radius: 100%;
-    width: 50px;
+  	margin: 0 0.5em;
   }
 
   /* Footer */
