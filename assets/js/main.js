@@ -159,8 +159,8 @@ WebsiteUI.prototype.renderProject = function(bookmark) {
     self.setupProjectImageLightbox($('#panorama'));
     self.setupProjectImageLightbox($('#sdio'));
 
-    $(document).on('click', 'a.go-movisee', function(e) { $('#movisee').goTo(); });
-    $(document).on('click', 'a.go-taiwanuxd', function(e) { $('#taiwanuxd').goTo(); });
+    //$(document).on('click', 'a.go-movisee', function(e) { $('#movisee').goTo(); });
+    //$(document).on('click', 'a.go-taiwanuxd', function(e) { $('#taiwanuxd').goTo(); });
 
     if (bookmark == 'movisee') { $('#movisee').goTo(); }
     else if (bookmark == 'taiwanuxd') { $('#taiwanuxd').goTo(); }
