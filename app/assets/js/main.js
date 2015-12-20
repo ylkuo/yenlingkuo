@@ -191,12 +191,13 @@ WebsiteUI.prototype.renderActivity = function() {
     $("#main").html(data);
     $(".navbar-collapse").collapse('hide');
 
+    self.setupProjectImageLightbox($('#2015-ml30'));
     self.setupProjectImageLightbox($('#2015-googleserve'));
     self.setupProjectImageLightbox($('#2012-ho-award'));
     self.setupProjectImageLightbox($('#2012-aaai'));
+    self.setupProjectImageLightbox($('#2011-mit'));
     self.setupProjectImageLightbox($('#2009-marathon-fubon'));
     self.setupProjectImageLightbox($('#2008-nightmarket'));
     self.setupProjectImageLightbox($('#2008-aiesec-wncf'));
-    self.setupProjectImageLightbox($('#2008-aiesec-transition'));
   });
 };
