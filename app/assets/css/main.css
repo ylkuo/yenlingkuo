@@ -859,6 +859,13 @@ ul.icons li .icon:before {
   .image.goto img {
     width: 135px;
   }
+  .image.thumb-big {
+    text-align: center;
+    width: 255px;
+  }
+  .image.thumb-big img {
+    width: 255px;
+  }
 
   /* Main */
   #main {
