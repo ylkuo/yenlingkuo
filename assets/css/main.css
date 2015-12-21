@@ -25,6 +25,17 @@
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>li>a {
   font-weight: bold;
+  color: #000;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
 
 body, input, select, textarea {
@@ -404,7 +415,7 @@ ul.icons li .icon:before {
 #main {
   margin-left: 5%;
   margin-right: 5%;
-  /*max-width: 54em;*/
+  max-width: 75em;
   padding: 4.5em 0 4em 3em;
   /* width: calc(100% - 35%); */
 }
@@ -449,7 +460,14 @@ ul.icons li .icon:before {
   display: inline-block;
   vertical-align: top;
   margin: 0 0.5em;
-  width: 50%;
+  width: 65%;
+}
+
+#main .cell-text-photo {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.5em;
+  width: 53%;
 }
 
 #main .cell-grid {
@@ -748,6 +766,9 @@ ul.icons li .icon:before {
   }
 
   /* Main */
+  .navbar-default .navbar-brand {
+    padding-left: 3em;
+  }
   #main {
     margin-left: 3%;
     max-width: none;
@@ -883,6 +904,10 @@ ul.icons li .icon:before {
 	  padding: 3.5em 1.9em 0.25em 1.9em;
   }
   #main .cell-text {
+    width: 90%;
+    text-align: left;
+  }
+  #main .cell-text-photo {
     width: 90%;
     text-align: left;
   }
