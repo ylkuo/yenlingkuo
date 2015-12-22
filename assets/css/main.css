@@ -224,6 +224,8 @@ ul.icons li .icon:before {
 .image.thumb-big {
   text-align: center;
   width: 350px;
+  height: 225px;
+  overflow: hidden;
 }
 
 .image.thumb-big:after {
@@ -415,7 +417,7 @@ ul.icons li .icon:before {
 #main {
   margin-left: 5%;
   margin-right: 5%;
-  max-width: 75em;
+  max-width: 63em;
   padding: 4.5em 0 4em 3em;
   /* width: calc(100% - 35%); */
 }
@@ -440,10 +442,12 @@ ul.icons li .icon:before {
 
 #main h2 {
   font-size: 1.3em;
+  font-weight: bold;
 }
 
 #main h3 {
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 #main h4 {
@@ -894,6 +898,8 @@ ul.icons li .icon:before {
   .image.thumb-big {
     text-align: center;
     width: 255px;
+    height: 165px;
+    overflow: hidden;
   }
   .image.thumb-big img {
     width: 255px;
