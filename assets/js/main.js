@@ -158,6 +158,8 @@ WebsiteUI.prototype.renderProject = function(bookmark) {
     self.setupProjectImageLightbox($('#movisee'));
     self.setupProjectImageLightbox($('#cubicfilm'));
     self.setupProjectImageLightbox($('#handpaintfilm'));
+    self.setupProjectImageLightbox($('#sciencevr'));
+    self.setupProjectImageLightbox($('#4dspacetime'));
     self.setupProjectImageLightbox($('#taiwanuxd'));
     self.setupProjectImageLightbox($('#flora'));
     self.setupProjectImageLightbox($('#panorama'));
