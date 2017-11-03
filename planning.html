@@ -152,7 +152,7 @@
   	          <td width="400px">
   				<center>
   	              <span style="font-size:14px">
-  	                <i>Example scenarios where agents cannot act in an environment if they don't have a planner that understands the dynamics of an environment or the consequence of an action. (a) Agent needs to plan toward wider space because it is easier to move. Agent also needs to wait till the other agent to pass by to move. (b) Agent needs to know the consequence of touching ovens figure out it is a dangerous action. All these additional information can be encoded into the sequence model.</i>
+  	                <i>Example scenarios where agents cannot act in an environment if they don't have a planner that understands the dynamics of an environment or the consequence of an action. (a) The agent needs to plan toward wider space because it is easier to move. The agent also needs to wait till the other agent to pass by to move. (b) The agent needs to know the consequence of touching ovens to figure out it is a dangerous action. All these additional information can be encoded into the sequence model.</i>
 				  </span>
 				</center>
   	          </td>
@@ -171,7 +171,7 @@
 	  	    </tr>
 		  </tbody>
 		</table>
-		Humans can plan efficiently and perform complex actions in dynamic environments. In contrast, planning in many simple environments is nearly intractable for robots. The goal of this research project is to understand how humans plan so efficiently, and how robots can plan as efficiently. Similar to how humans observe the environment to gather information to update their plans, I approach this problem by encoding the information an agent needs in planning as a sequence model, such as a LSTM or HMM. At each planning step, the agent's action is supervised by this sequence model. The preliminary result shows that our planner with sequence model can use fewer samples to achieve higer success rate in some difficult configuration maps. We're also running human subject experiments to see how this model maps to human intuition. This model also enables machines to hypothesize and explain their plans and their understanding of other's plans for collaboration and AI safety.
+		Humans can plan efficiently and perform complex actions in dynamic environments. In contrast, planning in many simple environments is nearly intractable for robots. The goal of this research project is to understand how humans plan so efficiently, and how robots can plan as efficiently. Similar to how humans observe the environment to gather information to update their plans, I approach this problem by encoding the information an agent needs in planning as a sequence model, such as an LSTM or HMM. At each planning step, the agent's action is supervised by this sequence model. The preliminary result shows that our planner with sequence model can use fewer samples to achieve higher success rate in some difficult configuration maps. We're also running human subject experiments to see how this model maps to human intuition. This model also enables machines to hypothesize and explain their plans and their understanding of other's plans for collaboration and AI safety.
 
 
   		<br><br>
@@ -218,9 +218,9 @@
 		  </tbody>
 		</table>
 		<br / >
-		In this project, we create a new motion planners that integrates HMMs/RNNs with robotic planning. Before planning, we train sequence models to capture various properties of environments and other agents, including the perceived environment changes, patterns of other humans' actions, and etc. In planning time, the sequence model influence the planner to steer toward a more desirable node as described in the algorithm above.
+		In this project, we create a new motion planners that integrate HMMs/RNNs with robotic planning. Before planning, we train sequence models to capture various properties of environments and other agents, including the perceived environment changes, patterns of other humans' actions, and etc. In planning time, the sequence model influence the planner to steer toward a more desirable node as described in the algorithm above.
 		<br /><br />
-		We tested this planner with maps that are difficult to the original RRT* planner, such as a map where robot needs to pass through a long and narrow passage to reach its goal. The figure on the right shows that with few sampled nodes, our planner has higher success rate than the original RRT* in such a difficult map.
+		We tested this planner with maps that are difficult to the original RRT* planner, such as a map where a robot needs to pass through a long and narrow passage to reach its goal. The figure on the right shows that with few sampled nodes, our planner has higher success rate than the original RRT* in such a difficult map.
 
       	<br /><br />
 		<hr>
@@ -259,7 +259,7 @@
 		  </tbody>
 		</table>
 		<br />
-		We use this planning algorithm to model how human plans in different situations. The sequence model captures human's utility function with respect to their percieved environment. In 2017 Brains, Minds, and Machines summer school, we piloted experiments to compare how humans plan path for different widths of passages (see left figure). We are extending the set-up to more complicated situations such as dangers in an environment. In the right figure, we have pit to represent dangerous obstacles and wall represent neural obstacle. We aim to understand how human behaviors change under the influence of danger and capture this with our planning model.
+		We use this planning algorithm to model how human plans in different situations. The sequence model captures human's utility function with respect to their perceived environment. In 2017 Brains, Minds, and Machines summer school, we piloted experiments to compare how humans plan a path for different widths of passages (see left figure). We are extending the set-up to more complicated situations such as dangers in an environment. In the right figure, we have pits to represent dangerous obstacles and walls represent neutral obstacles. We aim to understand how human behaviors change under the influence of danger and capture this with our planning model.
 
       	<br /><br />
 		<hr>
@@ -296,7 +296,7 @@
 		  </tbody>
 		</table>
 		<br />
-		Humans have Theory of Mind to understand other person's belief and intent. Research has suggested that humans simulate other person's plans to make these inference. In this project, we have robots to use our proposed planner to hypothesize other agent's actions. We also build up a recognizer for each word and compositionally build up sentences that accords with the hypothesized plans. For example, in the above figure, we see partial observation of an agent's movement, the planner will simulates various paths to reach different goals, the recognized sentences will rank the one that best matches the simulated plans top such as the sentences above.
+		Humans have Theory of Mind to understand other person's belief and intent. Research has suggested that humans simulate other person's plans to make these inferences. In this project, we have robots to use our proposed planner to hypothesize other agent's actions. We also build up a recognizer for each word and compositionally build up sentences that accords with the hypothesized plans. For example, in the above figure, we see partial observation of an agent's movement, the planner simulates various paths to reach different goals, the recognized sentences will rank the one that best matches the simulated plans top such as the sentences above.
 
       	<br /><br />
 		<hr>
@@ -336,7 +336,7 @@
 		  </tbody>
 		</table>
 		<br />
-		Humans communicate with others not only by language but also by watching other's behaviors. For example, when collaborating with others, we try to figure out what the other agent is doing and then act to respond to that. In this application, we modeling other agent's behaviors as part of our plan using sequence model. Unlike the traditional approach, in which the agent replans at each step by considering the current observation of the other agent, our planner takes other agent's behavior patterns into consideration to bias the plans. The figures above show the comparison of planners in the case meeting an agent who moves straight. Our proposed planner can meet the other agent earlier with less sampled nodes.
+		Humans communicate with others not only by language but also by watching other's behaviors. For example, when collaborating with others, we try to figure out what the other agent is doing and then act to respond to that. In this application, we modeling other agent's behaviors as part of our plan using sequence model. Unlike the traditional approach, in which the agent re-plans at each step by only considering the current observation of the other agent, our planner takes other agent's behavior patterns into consideration to bias the plans. The figures above show the comparison of planners in the case meeting an agent who moves straight. Our proposed planner can meet the other agent earlier with less sampled nodes.
 
   		<br /><br />  
  
