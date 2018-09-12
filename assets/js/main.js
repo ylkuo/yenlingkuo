@@ -64,6 +64,10 @@ WebsiteUI.prototype.pageController = function(url) {
       self.renderPublication();
       self.goTop();
       break;
+    case 'talk':
+      self.renderTalk();
+      self.goTop();
+      break;
     case 'activity':
       self.renderActivity();
       self.goTop();
@@ -181,6 +185,19 @@ WebsiteUI.prototype.renderPublication = function() {
     self.hideHeader();
     $("#main").html(data);
     $(".navbar-collapse").collapse('hide');
+  });
+};
+
+WebsiteUI.prototype.renderTalk = function() {
+  var self = this;
+  self.unsetActiveMenu();
+  $.get("talk.html", function(data) {
+    $(".go-talk").parent().addClass("active");
+    self.hideHeader();
+    $("#main").html(data);
+    $(".navbar-collapse").collapse('hide');
+
+    self.setupProjectImageLightbox($('#2018-cbmm-retreat'));
   });
 };
 
