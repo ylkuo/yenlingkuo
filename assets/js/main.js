@@ -155,6 +155,9 @@ WebsiteUI.prototype.renderProject = function(bookmark) {
     $("#main").html(data);
     $(".navbar-collapse").collapse('hide');
 
+    self.setupProjectImageLightbox($('#social'));
+    self.setupProjectImageLightbox($('#ltl'));
+    self.setupProjectImageLightbox($('#lang-planning'));
     self.setupProjectImageLightbox($('#cs-integration'));
     self.setupProjectImageLightbox($('#language-explorer'));
     self.setupProjectImageLightbox($('#analogyspace'));
