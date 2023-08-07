@@ -64,6 +64,10 @@ WebsiteUI.prototype.pageController = function(url) {
       self.renderPublication();
       self.goTop();
       break;
+    case 'teaching':
+      self.renderTeaching();
+      self.goTop();
+      break;
     case 'talk':
       self.renderTalk();
       self.goTop();
@@ -185,6 +189,17 @@ WebsiteUI.prototype.renderPublication = function() {
   self.unsetActiveMenu();
   $.get("publication.html", function(data) {
     $(".go-publication").parent().addClass("active");
+    self.hideHeader();
+    $("#main").html(data);
+    $(".navbar-collapse").collapse('hide');
+  });
+};
+
+WebsiteUI.prototype.renderTeaching = function() {
+  var self = this;
+  self.unsetActiveMenu();
+  $.get("teaching.html", function(data) {
+    $(".go-teaching").parent().addClass("active");
     self.hideHeader();
     $("#main").html(data);
     $(".navbar-collapse").collapse('hide');
